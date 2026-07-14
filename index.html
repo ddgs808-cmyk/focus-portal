@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>福克斯 工作系統首頁</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f4f5f7;
+    --card-bg: #ffffff;
+    --text: #1c1e21;
+    --sub: #65676b;
+    --accent: #2d6cdf;
+    --border: #e4e6eb;
+    --shadow: rgba(0,0,0,0.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #18191a;
+      --card-bg: #242526;
+      --text: #e4e6eb;
+      --sub: #b0b3b8;
+      --accent: #5b8def;
+      --border: #3a3b3c;
+      --shadow: rgba(0,0,0,0.4);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Microsoft JhengHei", "PingFang TC", -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 20px;
+  }
+  h1 {
+    font-size: 28px;
+    margin: 0 0 8px;
+  }
+  p.subtitle {
+    color: var(--sub);
+    margin: 0 0 40px;
+    font-size: 14px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+  }
+  a.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 24px;
+    text-decoration: none;
+    color: var(--text);
+    box-shadow: 0 2px 8px var(--shadow);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  a.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px var(--shadow);
+    border-color: var(--accent);
+  }
+  .icon {
+    font-size: 32px;
+    line-height: 1;
+  }
+  .name {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .desc {
+    font-size: 13px;
+    color: var(--sub);
+  }
+  .badge {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 2px;
+    padding: 3px 8px;
+    font-size: 11px;
+    border-radius: 999px;
+    background: rgba(217, 119, 6, 0.15);
+    color: #d97706;
+  }
+  footer {
+    margin-top: 48px;
+    font-size: 12px;
+    color: var(--sub);
+  }
+</style>
+</head>
+<body>
+  <h1>福克斯 工作系統首頁</h1>
+  <p class="subtitle">點選卡片即可開啟對應系統</p>
+
+  <div class="grid">
+    <a class="card" href="https://ems.focusforcar.com.tw/login" target="_blank" rel="noopener">
+      <div class="icon">🗓️</div>
+      <div class="name">請假系統</div>
+      <div class="desc">請假／加班／打卡異常申報與審核</div>
+    </a>
+
+    <a class="card" href="https://facebook-ai-cs.onrender.com/agent" target="_blank" rel="noopener">
+      <div class="icon">💬</div>
+      <div class="name">FB AI</div>
+      <div class="desc">Facebook AI 客服代理</div>
+    </a>
+
+    <a class="card" href="https://auto-order-webapp.onrender.com/login" target="_blank" rel="noopener">
+      <div class="icon">📦</div>
+      <div class="name">汽車百貨KEY單系統</div>
+      <div class="desc">KEY單／退貨查詢／客訂補單</div>
+    </a>
+
+    <a class="card" href="https://order-system-qe1l.onrender.com/" target="_blank" rel="noopener">
+      <div class="icon">📋</div>
+      <div class="name">庫存叫貨</div>
+      <div class="desc">庫存與叫貨系統</div>
+    </a>
+
+    <a class="card" href="https://order.focusforcar.com.tw/login?next=%2F" target="_blank" rel="noopener">
+      <div class="icon">🔄</div>
+      <div class="name">轉單系統</div>
+      <div class="desc">訂單轉發管理</div>
+    </a>
+
+    <a class="card" href="http://127.0.0.1:5151/" target="_blank" rel="noopener">
+      <div class="icon">🏷️</div>
+      <div class="name">印貼紙系統</div>
+      <div class="desc">商品貼紙列印</div>
+      <div class="badge">使用前請先啟動本機程式</div>
+    </a>
+  </div>
+
+  <footer>福克斯國際有限公司 內部工作系統入口</footer>
+</body>
+</html>
